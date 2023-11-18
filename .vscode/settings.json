@@ -3,5 +3,7 @@
         "Coding Club/71A: Way Too Long Words",
         "Coding Club"
     ],
-    
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    }
 }
