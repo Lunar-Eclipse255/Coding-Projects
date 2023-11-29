@@ -1,3 +1,4 @@
+package Watermelon;
 import java.util.Scanner;
 public class WatermelonSplit {
     public static void main(String[] args) {
