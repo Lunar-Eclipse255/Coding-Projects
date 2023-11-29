@@ -17,5 +17,6 @@ public class Long {
         for (String j : list){
             System.out.println(j);
         }
+        scanner.close();
     }
 }

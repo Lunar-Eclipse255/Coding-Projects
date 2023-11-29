@@ -19,5 +19,6 @@ public class WatermelonSplit {
         else{
             System.out.println("NO");
         }
+        scanner.close();
     }
 }

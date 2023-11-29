@@ -6,6 +6,8 @@ public class Round {
         int lowScore = scanner.nextInt();
         System.out.println(num);
         System.out.println(lowScore);
-        int[] scores = new int[n];
+        int[] scores = new int[num];
+
+        scanner.close();
     }
 }
