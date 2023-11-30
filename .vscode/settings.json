@@ -5,5 +5,8 @@
     ],
     "code-runner.executorMap": {
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    }
+    },
+    "rust-analyzer.linkedProjects": [
+        "./Rust/cargo_test/Cargo.toml"
+    ]
 }
