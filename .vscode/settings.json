@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "Coding Club/71A: Way Too Long Words",
-        "Coding Club"
+        "Coding Club",
+        "Advent Of Code"
     ],
     "code-runner.executorMap": {
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
