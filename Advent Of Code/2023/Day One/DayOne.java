@@ -16,7 +16,7 @@ public class DayOne {
         // efficient
         try {
             
-            FileReader fileName = new FileReader("Inputs/DayOne.txt");
+            FileReader fileName = new FileReader("DayOne.txt");
  
             // Creating a BufferReader class object to
             // read file as passed above
