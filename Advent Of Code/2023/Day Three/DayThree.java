@@ -10,6 +10,7 @@ public class DayThree {
         int sum=0;
         char[][] fileArray = new char[140][];
         String specialCharacters = "&+-#$@*/=%";
+        int newSum=0;
         try (FileReader fileReader = new FileReader(file);
                  BufferedReader bufferedReader = new BufferedReader(fileReader)) {
                 String line;
@@ -46,60 +47,92 @@ public class DayThree {
                         }
                         if((j-1)!=-1){
                             if (specialCharacters.contains(String.valueOf(fileArray[i][j-1]))){
-                                sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[(i)], j, j + (numCount))).trim());
-                                j+=numCount;
-                                break outerLoop;
-                            }
-                            if ((i-1)!=-1){
-                                if (specialCharacters.contains(String.valueOf(fileArray[i-1][j-1]))){
-                                    sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[(i)], j, j + (numCount))).trim());
+                                if((j+numCount-1)<fileArray[i].length){
+                                    sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount-1))).trim());
+                                    newSum=Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount))).trim());
+                                    System.out.println(newSum);
                                     j+=numCount;
                                     break outerLoop;
                                 }
                             }
+                            if ((i-1)!=-1){
+                                if (specialCharacters.contains(String.valueOf(fileArray[i-1][j-1]))){
+                                    if((j+numCount-1)<fileArray[i].length){
+                                        sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount-1))).trim());
+                                        newSum=Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount))).trim());
+                                    System.out.println(newSum);
+                                        j+=numCount;
+                                        break outerLoop;
+                                    }
+                                }
+                            }
                             if ((i+1)!=fileArray.length){
                                 if (specialCharacters.contains(String.valueOf(fileArray[i+1][j-1]))){
-                                    sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[(i)], j, j + (numCount))).trim());
-                                    j+=numCount;
-                                    break outerLoop;
+                                    if((j+numCount-1)<fileArray[i].length){
+                                        sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount-1))).trim());
+                                        newSum=Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount))).trim());
+                                    System.out.println(newSum);
+                                        j+=numCount;
+                                        break outerLoop;
+                                    }
                                 }
                             }
                         }
                         for (int l=0;l<=numCount;l++){
                             if ((i-1)!=-1){
                                 if (specialCharacters.contains(String.valueOf(fileArray[i-1][j+l]))){
-                                    sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[(i)], j, j + (numCount))).trim());
-                                    j+=numCount;
-                                    break outerLoop;
+                                    if((j+numCount-1)<fileArray[i].length){
+                                        sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount-1))).trim());
+                                        newSum=Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount))).trim());
+                                    System.out.println(newSum);
+                                        j+=numCount;
+                                        break outerLoop;
+                                    }
                                 }
                             }
                             if ((i+1)!=fileArray.length){
                                 if (specialCharacters.contains(String.valueOf(fileArray[i+1][j+l]))){
-                                    System.out.println("First: "+ fileArray[i][j]+"Last: "+fileArray[i][j+l]);
-                                    sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[(i)], j, j + (numCount))).trim());
-                                    j+=numCount;
-                                    break outerLoop;
+                                    //System.out.println("First: "+ fileArray[i][j]+"Last: "+fileArray[i][j+l]);
+                                    if((j+numCount-1)<fileArray[i].length){
+                                        sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount-1))).trim());
+                                        newSum=Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount))).trim());
+                                    System.out.println(newSum);
+                                        j+=numCount;
+                                        break outerLoop;
+                                    }
                                 }
                             }
                         }
                         if((j+1)!=fileArray[i].length){
                             if (specialCharacters.contains(String.valueOf(fileArray[i][j+1]))){
-                                sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[(i)], j, j + (numCount))).trim());
-                                j+=numCount;
-                                break outerLoop;
-                            }
-                            if ((i-1)!=-1){
-                                if (specialCharacters.contains(String.valueOf(fileArray[i-1][j+1]))){
-                                    sum+= Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[(i)],j,j+(numCount-1))));
+                                if((j+numCount-1)<fileArray[i].length){
+                                    sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount-1))).trim());
+                                    newSum=Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount))).trim());
+                                    System.out.println(newSum);
                                     j+=numCount;
                                     break outerLoop;
                                 }
                             }
+                            if ((i-1)!=-1){
+                                if (specialCharacters.contains(String.valueOf(fileArray[i-1][j+1]))){
+                                    if((j+numCount-1)<fileArray[i].length){
+                                        sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount-1))).trim());
+                                        newSum=Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount))).trim());
+                                    System.out.println(newSum);
+                                        j+=numCount;
+                                        break outerLoop;
+                                    }
+                                }
+                            }
                             if ((i+1)<fileArray.length){
                                 if (specialCharacters.contains(String.valueOf(fileArray[i+1][j+1]))){
-                                    sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount-1))).trim());
-                                    j+=numCount;
-                                    break outerLoop;
+                                    if((j+numCount-1)<fileArray[i].length){
+                                        sum += Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount-1))).trim());
+                                        newSum=Integer.parseInt(String.valueOf(Arrays.copyOfRange(fileArray[i], j, j + (numCount))).trim());
+                                    System.out.println(newSum);
+                                        j+=numCount;
+                                        break outerLoop;
+                                    }
                                 }
                             }
                         }
