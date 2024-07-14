@@ -1,0 +1,4 @@
+*.rs linguist-language=Rust
+Rust/**/*.mk linguist-vendored
+Rust/**/*.toml linguist-vendored
+Rust/**/*.lock linguist-vendored
