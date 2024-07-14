@@ -2,3 +2,4 @@
 Rust/**/*.mk linguist-vendored
 Rust/**/*.toml linguist-vendored
 Rust/**/*.lock linguist-vendored
+Rust/** linguist-vendored
