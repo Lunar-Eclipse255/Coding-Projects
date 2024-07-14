@@ -2,4 +2,5 @@
 Rust/**/*.mk linguist-vendored
 Rust/**/*.toml linguist-vendored
 Rust/**/*.lock linguist-vendored
-Rust/advent_of_code/** linguist-vendored
+Rust/**/*.d linguist-vendored
+Rust/**/*.o linguist-vendored
