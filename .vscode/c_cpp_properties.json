@@ -1,18 +1,30 @@
 {
-    "configurations": [
-      {
-        "name": "Mac",
-        "includePath": [
-          "${workspaceFolder}/**"
+  "configurations": [
+    {
+      "name": "PROS Project",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "compilerPath": "/Users/gagrehansavona/Library/Application Support/Code/User/globalStorage/sigbots.pros/install/pros-toolchain-macos/bin/arm-none-eabi-g++",
+      "cStandard": "gnu11",
+      "cppStandard": "gnu++20",
+      "intelliSenseMode": "gcc-arm",
+      "macFrameworkPath": [
+        "/System/Library/Frameworks"
+      ],
+      "browse": {
+        "path": [
+          "/Users/gagrehansavona/Desktop/Coding Assignments"
         ],
-        "macFrameworkPath": [
-          "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
-        ],
-        "compilerPath": "/usr/bin/g++",
-        "cStandard": "c17",
-        "cppStandard": "c++14",
-        "intelliSenseMode": "clang-x64"
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
       }
-    ],
-    "version": 4
-  }
+    }
+  ],
+  "version": 4
+}
